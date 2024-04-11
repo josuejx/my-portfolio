@@ -1,10 +1,10 @@
 ---
 import Toggle from "../components/Toggle.astro";
-import Cuentas from "../components/Cuentas.astro";
-import TimeLineExperiencia from "../components/TimeLineExperiencia.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import Introduction from "./sections/Introduction.astro";
+import Experience from "./sections/Experience.astro";
+import Studies from "./sections/Studies.astro";
+import Projects from "./sections/Projects.astro";
 import Footer from "../components/Footer.astro";
-import Boton from "../components/Boton.astro";
 ---
 
 <!doctype html>
@@ -22,159 +22,11 @@ import Boton from "../components/Boton.astro";
       <Toggle />
     </header>
     <main>
-      <section id="sobre-mi">
-        <div class="flex justify-start pt-5">
-          <img
-            src="/avatar.png"
-            alt="Josué García Asensi"
-            class="w-24 h-24 rounded-full"
-          />
-          <div class="ml-4">
-            <h2 class="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              Josué GA
-            </h2>
-            <p class="text-sm">Fullstack Developer</p>
-            <Cuentas />
-          </div>
-        </div>
-        <div class="mt-5 text-base">
-          <p>
-            He vivido y estudiado en China durante 15 años y me considero una
-            persona con mucha capacidad adaptativa y muy resolutiva. Siempre se
-            me ha enseñado a aprender y a trabajar de forma continua y enérgica.
-          </p>
-          <br />
-          <p>
-            Me gusta mucho el mundo de la programación y la tecnología, mi
-            objetivo es dar lo mejor de mí en cada proyecto que se me presente.
-          </p>
-        </div>
-      </section>
-      <hr class="my-12 h-0.5 border-t-0 bg-black dark:bg-white/10" />
-      <section id="experiencia" class="flex flex-col">
-        <div>
-          <h2 class="text-2xl font-bold mb-10">Experiencia</h2>
-          <div class="ml-5">
-            <ol class="relative border-s border-gray-200 dark:border-gray-700">
-              <TimeLineExperiencia
-                titulo="Akra Informática Coop. V."
-                icono="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
-                fecha="jun. 2022 - Actualidad"
-              >
-                <ul
-                  class="text-base font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <li>
-                    Desarrollador Fullstack, Multiplataforma y Web de nuevas
-                    aplicaciones.
-                  </li>
-                  <li>
-                    Mantenimiento de aplicaciones existentes y desarrollo de
-                    nuevas funcionalidades.
-                  </li>
-                  <li>Análisis y diseño de soluciones a medida.</li>
-                </ul>
-              </TimeLineExperiencia>
-            </ol>
-          </div>
-        </div>
-      </section>
-      <section id="estudios" class="flex flex-col">
-        <div>
-          <h2 class="text-2xl font-bold mb-10">Estudios</h2>
-        </div>
-        <div class="ml-5">
-          <ol class="relative border-s border-gray-200 dark:border-gray-700">
-            <TimeLineExperiencia
-              titulo="Universidad Internacional de La Rioja (UNIR)"
-              icono="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
-              fecha="oct. 2023 - jul. 2024"
-            >
-              <p
-                class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
-              >
-                Máster Oficial en Inteligencia Artificial
-              </p>
-            </TimeLineExperiencia>
-
-            <TimeLineExperiencia
-              titulo="UA - Universidad de Alicante"
-              icono="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-              fecha="sept. 2019 - jul. 2023"
-            >
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Grado en Ingeniería Informática
-              </p>
-            </TimeLineExperiencia>
-            <TimeLineExperiencia
-              titulo="IES Francisco Figueras Pacheco"
-              icono="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
-              fecha="sept. 2017 - jun. 2019"
-            >
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Bachillerato de Ciencias y Tecnología
-              </p>
-            </TimeLineExperiencia>
-            <TimeLineExperiencia
-              titulo="Ling Ling Middle School, Shanghai, China"
-              icono="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
-              fecha="sept. 2011 - jul. 2016"
-            >
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Eduación Secundaria Obligatoria (ESO)
-              </p>
-            </TimeLineExperiencia>
-          </ol>
-        </div>
-      </section>
-      <section id="proyectos" class="mb-10">
-        <h2 class="text-2xl font-bold mb-10">Proyectos</h2>
-        <div class="grid md:grid-cols-2 gap-4">
-          <ProjectCard
-            titulo="Trabajo de fin de grado"
-            descripcion="Aplicación Multiplataforma de un sistema de subastas online"
-            link="https://github.com/josuejx/tfg_auction"
-            img="/tfg_auction.png"
-            imgAlt="Imagen del proyecto TFG"
-          >
-            <div class="flex justify-start">
-              <Boton
-                link="https://github.com/josuejx/tfg_auction"
-                icon="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                text="GitHub"
-                color="blue"
-              />
-              <Boton
-                link="https://rua.ua.es/dspace/bitstream/10045/136605/1/Desarrollo_de_una_aplicacion_multiplataforma_de_subastas_Garcia_Asensi_Josue.pdf"
-                icon="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2 2h12a2 2 0 0 0 2-2 2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2V4a2 2 0 0 0-2-2h-7Zm-6 9a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-1h.5a2.5 2.5 0 0 0 0-5H5Zm1.5 3H6v-1h.5a.5.5 0 0 1 0 1Zm4.5-3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h1.376A2.626 2.626 0 0 0 15 15.375v-1.75A2.626 2.626 0 0 0 12.375 11H11Zm1 5v-3h.375a.626.626 0 0 1 .625.626v1.748a.625.625 0 0 1-.626.626H12Zm5-5a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-1h1a1 1 0 1 0 0-2h-1v-1h1a1 1 0 1 0 0-2h-2Z"
-                text="Documentación"
-                color="red"
-              />
-            </div>
-          </ProjectCard>
-          <ProjectCard
-            titulo="Proyecto 2"
-            descripcion="Descripción del proyecto 2"
-            link="https://www.google.com"
-            img="/proyecto_prueba.png"
-            imgAlt="Imagen del proyecto 2"
-          />
-          <ProjectCard
-            titulo="Proyecto 3"
-            descripcion="Descripción del proyecto 3"
-            link="https://www.google.com"
-            img="/proyecto_prueba.png"
-            imgAlt="Imagen del proyecto 3"
-          />
-          <ProjectCard
-            titulo="Proyecto 4"
-            descripcion="Descripción del proyecto 4"
-            link="https://www.google.com"
-            img="/proyecto_prueba.png"
-            imgAlt="Imagen del proyecto 4"
-          />
-        </div>
-      </section>
+      <Introduction />
+      <hr class="my-12 h-0.5 border-t-0 bg-black dark:bg-gray-400" />
+      <Experience />
+      <Studies />      
+      <Projects />
     </main>
   </body>
   <Footer />
