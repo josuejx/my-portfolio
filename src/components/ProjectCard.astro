@@ -1,34 +1,65 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   titulo: string;
-  descripcion: string;
   link: string;
   img: string;
   imgAlt: string;
 }
 
-const { titulo, descripcion, link, img, imgAlt } = Astro.props;
+const { titulo, link, img, imgAlt } = Astro.props;
 ---
-
+<!--
 <div
-  class="max-w-sm pt-4 pl-4 pr-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  class="flex flex-col space-y-4 max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
 >
-  <a href={link} target="_blank">
-    <img
-      class="rounded-lg border-2 border-blue-700 dark:border-none w-full h-48 object-cover"
-      src={img}
-      alt={imgAlt}
-    />
-  </a>
-  <div class="pt-5 pb-5">
+  <div class="flex items-center justify-center h-52">
+    <a href={link} target="_blank">
+      <Image
+        src={img}
+        alt={imgAlt}
+        width={400}
+        height={200}
+        class="rounded-lg border-2 border-blue-700 dark:border-none object-cover"
+      />
+    </a>
+  </div>
+  <div class="flex flex-col space-y-2">
     <h3
       class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
     >
       {titulo}
     </h3>
-    <p class="mb-3 text-base font-normal text-gray-700 dark:text-gray-400">
-      {descripcion}
-    </p>
     <slot />
+  </div>
+</div>
+-->
+
+<div class="relative h-full ml-0 mr-0 sm:mr-3">
+  <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-black dark:bg-slate-300 rounded-lg"></span>
+  <div class="relative h-full p-5 bg-white dark:bg-slate-800 border-2 border-black dark:border-slate-300 rounded-lg">
+      <div class="flex items-center -mt-1">
+          
+      <div class="flex items-center justify-center h-52">
+        <a href={link} target="_blank">
+          <Image
+            src={img}
+            alt={imgAlt}
+            width={400}
+            height={200}
+            class="rounded-lg border-2 border-black dark:border-none object-cover"
+          />
+        </a>
+      </div>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h3
+          class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {titulo}
+        </h3>
+        <slot />
+      </div>
   </div>
 </div>
