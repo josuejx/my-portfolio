@@ -5,6 +5,8 @@ import ProjectCard from "../../components/ProjectCard.astro";
 // --- Projects
 import ProjectTFG from "./projects/ProjectTFG.astro";
 import Projectportfolio from "./projects/Projectportfolio.astro";
+import ProjectPreventa from "./projects/ProjectPreventa.astro";
+import ProjectVentas from "./projects/ProjectVentas.astro";
 ---
 
 <section id="projects" class="mb-10">
@@ -12,17 +14,19 @@ import Projectportfolio from "./projects/Projectportfolio.astro";
     <div class="grid md:grid-cols-2 gap-4">
       <ProjectTFG />
       <Projectportfolio />
-      <ProjectCard
+      <ProjectPreventa />
+      <ProjectVentas />
+      <!-- <ProjectCard
         titulo="Proyecto 3"
         link="https://www.google.com"
         img="/proyecto_prueba.png"
         imgAlt="Imagen del proyecto 3"
-      />
-      <ProjectCard
+      /> -->
+      <!-- <ProjectCard
         titulo="Proyecto 4"
         link="https://www.google.com"
         img="/proyecto_prueba.png"
         imgAlt="Imagen del proyecto 4"
-      />
+      /> -->
     </div>
   </section>
